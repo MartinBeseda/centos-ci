@@ -1,6 +1,8 @@
 FROM centos:latest
 
-RUN yum clean all && yum update && yum install -y -V make build-essential g++-8 wget git gcc gfortran pkg-config
+RUN yum clean all 
+RUN yum update 
+RUN yum install -y -V make build-essential g++-8 wget git gcc gfortran pkg-config
 
 # Download the new version of CMake and "install" it
 RUN wget https://github.com/Kitware/CMake/releases/download/v3.14.0-rc2/cmake-3.14.0-rc2-Linux-x86_64.sh
