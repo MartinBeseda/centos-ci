@@ -2,7 +2,7 @@ FROM centos:latest
 
 RUN yum clean all 
 RUN yum -y update 
-RUN yum -y -v install make build-essential wget git gcc gcc-c++ gfortran pkg-config
+RUN yum -y -v install make build-essential wget git gcc gcc-c++ gcc-gfortran pkg-config
 
 # Install GCC/G++ 8.*
 RUN yum -y install centos-release-scl
