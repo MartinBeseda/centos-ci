@@ -2,11 +2,11 @@ FROM centos:latest
 
 RUN yum clean all 
 RUN yum -y update 
-RUN yum -y -v install make build-essential wget git gcc-gfortran pkg-config
+RUN yum -y -v install make build-essential wget git pkg-config
 
 # Install GCC/G++ 8.*
 RUN yum -y install centos-release-scl
-RUN yum -y install devtoolset-8-gcc devtoolset-8-gcc-c++
+RUN yum -y install devtoolset-8-gcc devtoolset-8-gcc-c++ devtoolset-8-gcc-gfortran
 #RUN scl enable devtoolset-8 -- bash
 
 # Download the new version of CMake and "install" it
