@@ -7,7 +7,6 @@ RUN yum -y groupinstall "Development Tools"
 RUN yum -y install kernel-devel kernel-headers
 
 # Install GCC/G++ 8.*
-RUN yum -y install centos-release-scl
 RUN yum -y install devtoolset-8-gcc devtoolset-8-gcc-c++ devtoolset-8-gcc-gfortran
 
 # Download the new version of CMake and "install" it
