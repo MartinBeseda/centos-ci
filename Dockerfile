@@ -2,7 +2,7 @@ FROM centos:latest
 
 RUN yum clean all 
 RUN yum -y update 
-RUN yum -y -v install make wget git pkg-config mpich mpich-devel
+RUN yum -y -v install make wget git pkg-config mpich mpich-devel python python3
 RUN yum -y groupinstall "Development Tools"
 RUN yum -y install kernel-devel kernel-headers
 
