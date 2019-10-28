@@ -6,6 +6,9 @@ RUN yum -y -v install make wget git pkg-config mpich mpich-devel python2 python3
 RUN yum -y groupinstall "Development Tools"
 RUN yum -y install kernel-devel kernel-headers
 
+RUN alias python="python2"
+RUN alias python3="python3.6"
+
 # Install GCC/G++ 8.*
 #RUN yum -y install devtoolset-8-gcc devtoolset-8-gcc-c++ devtoolset-8-gcc-gfortran
 
